@@ -2,7 +2,11 @@
 // convert each arg from lowercase to uppercase  =
 //================================================
 
-
+/*
+** This program takes command-line arguments and prints them in uppercase.
+** If no arguments are provided, it prints a specific noise message.
+** It demonstrates basic string manipulation and standard output usage.
+*/
 
 //================== wath shoulde know ================
 /*
