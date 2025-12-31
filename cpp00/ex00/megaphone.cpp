@@ -4,7 +4,7 @@
 
 
 
-//==================wath shoulde know================
+//================== wath shoulde know ================
 /*
          Namespaces
          Stdio streams
@@ -28,30 +28,16 @@
 
 int main(int ac, char **av)
 {
-    if(ac == 1)
+    (void) ac;
+    if( av[1] == NULL)
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" <<  std::endl;
-    int i;
-    int j;
-    char ch;
+    int i, j;
     i = 1;
     while (av[i])
     {
         j = 0;
         while(av[i][j])
-        {
-            if(tolower(av[i][j]))
-            {
-                ch = toupper(av[i][j]);
-                j++;
-            }
-            else
-            {
-                ch = av[i][j] ;
-                j++; 
-            }
-            std::cout << ch;
-        }
-        std::cout << " " ;
+            std::cout << (char) toupper(av[i][j++]);
         i++;
     }
     std::cout << std::endl;
