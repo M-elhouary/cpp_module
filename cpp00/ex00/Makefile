@@ -3,7 +3,7 @@
 NAME = megaphone
 
 # Compiler and flags
-CC = c++
+CXX = c++
 # Compiler flags
 CXXFLAGS = -Wextra -Werror -Wall -std=c++98
 
@@ -22,7 +22,7 @@ all: $(NAME)
 
 # Rule for compiling source files into object files
 $(NAME): $(OBJ)
-	$(CC) $(CXXFLAGS) -o $(NAME) $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJ)
 
 # remove object files
 clean:
