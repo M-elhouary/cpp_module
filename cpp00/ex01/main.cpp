@@ -1,5 +1,6 @@
 #include "PhoneBook.hpp"
 
+<<<<<<< HEAD
 
 
 
@@ -15,8 +16,18 @@
 // std
 // 
 
+=======
+/*
+  Main function: Entry point of the PhoneBook application.
+  Runs a loop that accepts commands (ADD, SEARCH, EXIT) from the user.
+  - ADD: Adds a new contact.
+  - SEARCH: Lists contacts and allows viewing details.
+  - EXIT: Terminates the program.
+*/
+>>>>>>> origin/main
 int main()
 {
+  // 
   PhoneBook ContactBook;
   std::string string_input;
   try
