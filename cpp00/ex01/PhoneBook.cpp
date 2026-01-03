@@ -3,43 +3,43 @@
 
 PhoneBook::PhoneBook()
 {
-    this->current_index = 0;
+    this->current_index = 0; 
     this->total_index = 0;
 }
 
-/*
-  Prompts the user for an index and displays the corresponding contact.
-  Validates the input to ensure it's a valid index number.
-*/
+
+//   Prompts the user for an index and displays the corresponding contact
+//   Validates the input to ensure it's a valid index number
+
 void PhoneBook::Desplay_by_Index()
 {
     std::cout << "Enter Index: " ;
-    std::string index_value_str;
+    std::string index_value_str; 
     int Index;
     std::getline(std::cin, index_value_str);
-    std::stringstream ss(index_value_str);
+    std::stringstream ss(index_value_str); // Create a stringstream from the input string
     if(!(ss >> Index) || Index < 0 || !ss.eof() || Index > current_index - 1)
     {
         std::cout << "Invalid index. Please enter a valid number." << std::endl;
         return;
     }
-    contacts[Index].DesplayValue(1);
+    contacts[Index].DesplayValue(1); // Display the contact details for the given index
 
 }
 
 std::string parse(std::string str)
 {
     
-    std::string input_value;
+    std::string input_value; // Variable to hold user input
     while (true)
     {
         std::cout << str;
-        if(!std::getline(std::cin, input_value))
+        if(!std::getline(std::cin, input_value)) // Read user input and check for EOF
         {
             std::cout << "\nEOF detected (Ctrl+D) Exiting ADD command " << std::endl;
             throw std::runtime_error("EOF");
         }
-        if (input_value.empty())
+        if (input_value.empty()) // Check for empty input
         {
             std::cout << "Input cannot be empty. Please try again." << std::endl;
             continue;
@@ -49,11 +49,11 @@ std::string parse(std::string str)
 }
 
 
-/*
-  Adds a new contact to the phonebook.
- If the phonebook is full (8 contacts), it replaces the oldest one.
-  Prompts the user for all necessary contact details.
-*/
+
+//   Adds a new contact to the phonebook
+//  If the phonebook is full (8 contacts)  it replaces the oldest one
+//   Prompts the user for all necessary contact details
+
 void PhoneBook::Add_New_Contact()
 {
     if(current_index == 8)
@@ -69,10 +69,10 @@ void PhoneBook::Add_New_Contact()
     current_index++;
 }
 
-/*
-  Displays a list of all available contacts in a formatted table.
-  Then calls Desplay_by_Index to allow the user to view details of a specific contact.
-*/
+
+ // Displays a list of all available contacts in a formatted table 
+// Then calls Desplay_by_Index to allow the user to view details of a specific contact
+
 void PhoneBook::Search_A_Contact()
 {
     int i = 0;

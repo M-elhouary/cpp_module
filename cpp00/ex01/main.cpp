@@ -1,53 +1,27 @@
 #include "PhoneBook.hpp"
 
-<<<<<<< HEAD
-
-
-
-
-// class
-// object
-// instance
-// member attributes
-// member function
-// this
-// initialization list
-// namespaces
-// std
-// 
-
-=======
-/*
-  Main function: Entry point of the PhoneBook application.
-  Runs a loop that accepts commands (ADD, SEARCH, EXIT) from the user.
-  - ADD: Adds a new contact.
-  - SEARCH: Lists contacts and allows viewing details.
-  - EXIT: Terminates the program.
-*/
->>>>>>> origin/main
 int main()
 {
-  // 
-  PhoneBook ContactBook;
-  std::string string_input;
-  try
+  
+  PhoneBook ContactBook; // Create an instance of PhoneBook
+  std::string string_input; // Variable to hold user input commands
+  try // Exception handling block
   {
     while (true)
     {
       std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
-        if(!(std::getline(std::cin, string_input)))
+        if(!(std::getline(std::cin, string_input))) // Read user input
           break;
       if (string_input == "ADD")
-                  ContactBook.Add_New_Contact();
+                  ContactBook.Add_New_Contact(); // Call method to add a new contact
       else if(string_input == "SEARCH")
-          ContactBook.Search_A_Contact();
-      else if(string_input == "EXIT")
+          ContactBook.Search_A_Contact(); // Call method to search for a contact
+      else if(string_input == "EXIT") // Check for exit command
           break;
     }
   }
-  catch(const std::exception& e)
+  catch(const std::exception& e) // Catch any exceptions thrown during execution
   {
-    std::cout << "\nProgram terminated." << std::endl;
+    std::cout << "\nProgram terminated." << std::endl; // Notify user of program termination
   }
-  return (0);
 }

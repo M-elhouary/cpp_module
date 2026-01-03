@@ -6,13 +6,13 @@
 
 
 
-typedef enum s_flag {FIRSTN, LASTEN, PHONE, SECRET, NICKN} t_flag;
+typedef enum s_flag {FIRSTN, LASTEN, PHONE, SECRET, NICKN} t_flag; // Enum to represent different contact fields
 
-/*
-   The Contact class represents a single contact in the phonebook.
-   It stores personal information like first name, last name, phone number, etc.
-   It provides methods to set these values and display them.
-*/
+
+//    The Contact class represents a single contact in the phonebook
+//    It stores personal information like first name, last name phone number, etc.
+//    It provides methods to set these values and display them
+
 class Contact {
     private:
         std::string firstName;
@@ -26,6 +26,3 @@ class Contact {
 };
 
 #endif
-
-
-
