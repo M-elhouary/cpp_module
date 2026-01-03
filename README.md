@@ -15,8 +15,6 @@ Small collection of C++ practice exercises (phonebook/megaphone etc.). This repo
     - `PhoneBook.hpp`
     - `main.cpp`
     - `Makefile`
-  - `a.out` (possible compiled binary)
-  - `test.cpp` (misc test file)
   - `en.subject.pdf` (exercise description/original subject PDF)
 
 > Note: file listing may vary; check the folders to see exact contents.
