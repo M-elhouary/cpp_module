@@ -35,9 +35,16 @@ void Harl::warning(){
 
 
 
+/*
+** complain uses a switch statement to implement the filter.
+** It finds the index of the level, then falls through from that case
+** to execute all more severe levels.
+** Note: The implementation here manually calls subsequent functions instead of standard switch fallthrough syntax for function calls, 
+** but achieves the same result (executing 0->3, 1->3, etc).
+*/
 void Harl::complain(std::string level)
 {
-    int index = 0;
+    int index = -1; // Default to -1 (not found)
     void (Harl::*function[]) (void) = {
         &Harl::debug,
         &Harl::info,
@@ -52,22 +59,28 @@ void Harl::complain(std::string level)
         if(ar_level[i] == level){
            index = i;
            break;
-           
+        }
     }
-}
     
     switch (index)
     {
     case 0:
         ( this->*function[0])();
-        ( this->*function[1])();
-        ( this->*function[2])();
-        ( this->*function[3])();
-        break;
+        // Fallthrough
     case 1:
         ( this->*function[1])();    
-        ( this->*function[2])();
-        ( this->*function[3])();    
+        // Fallthrough
+    case 2:
+        ( this->*function[2])();    
+        // Fallthrough
+    case 3:
+        ( this->*function[3])();
+        break;
+    default:
+        std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+        break;
+    }
+}    
         break;
     case 2:
         ( this->*function[2])();    

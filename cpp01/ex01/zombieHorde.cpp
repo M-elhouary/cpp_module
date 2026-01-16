@@ -1,7 +1,11 @@
 #include "Zombie.hpp"
 #include <string>
 
-
+/*
+** Allocates N Zombie objects in a single memory block using new[].
+** Initializes each Zombie with the given name.
+** Returns a pointer to the first Zombie in the array.
+*/
 Zombie* zombieHorde( int N, std::string name)
 {
 

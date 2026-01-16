@@ -1,5 +1,9 @@
 #include "Harl.hpp"
 
+/*
+** Tests the Harl filter.
+** Expects one argument: the minimum log level to display.
+*/
 int main(int ac, char **av)
 {
     Harl myHarl;

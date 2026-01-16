@@ -2,6 +2,10 @@
 
 Zombie* zombieHorde( int N, std::string name);
 
+/*
+** Demonstrates allocation of multiple objects using helper function.
+** Uses delete[] to free the memory, which is crucial for arrays allocated with new[].
+*/
 int main()
 {
     int N = 6;
