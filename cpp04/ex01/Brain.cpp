@@ -14,6 +14,7 @@ Brain::Brain(const Brain &other)
     }
 }
 
+
 Brain &Brain::operator=(const Brain &other)
 {
     std::cout << "Brain assignment operator called" << std::endl;

@@ -1,7 +1,6 @@
 #include "Cat.hpp"
 
 // Default constructor
-
 Cat::Cat()
 {
     this->type = "Cat";
@@ -22,7 +21,7 @@ Cat &Cat::operator=(const Cat &other)
     std::cout << "Cat assignment operator called" << std::endl;
     if (this != &other)
     {
-        Animal::operator=(other);
+        Animal::operator=(other); // Call base class assignment operator
         delete this->brain;
         this->brain = new Brain(*other.brain);
     }

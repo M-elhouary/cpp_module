@@ -13,10 +13,10 @@ class Animal {
         Animal();
         Animal(const Animal &other);
         Animal &operator=(const Animal &other);
-        virtual ~Animal();
+        ~Animal();
         std::string getType() const;
         std::string setType(std::string &type);
-        virtual void makeSound() const;
+        void makeSound() const;
 };
 
 #endif 
